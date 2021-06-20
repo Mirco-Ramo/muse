@@ -1,0 +1,763 @@
+html{
+    scroll-behavior: smooth; /*fonte: w3schools*/
+}
+
+body{
+    margin: 0px;
+}
+
+header {
+    margin: 170px 0;
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav{
+    position: fixed;
+    z-index:4;
+    top:0;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding-top:10px;
+}
+
+nav *{
+    display:inline-block;
+    text-decoration: none;
+    font-size: 1.7em;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+nav a:hover{
+    color: gold;
+}
+
+#profile_photo {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%; 
+    margin-top: -7px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  background-color: #222;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #818181;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  a {font-size: 18px;}
+}
+
+#navOpener{
+    font-size:30px;
+    cursor:pointer;
+    display: inline-block;
+    float: right;
+}
+
+section{
+    font-size: 1.2em;
+    background: center top no-repeat;
+    -webkit-background-size: cover;
+    position: relative;
+    height:700px;
+    clear: both;
+    margin:auto;
+    width: 100%;
+}
+
+.odd {
+    text-align:left;
+}
+
+.even {
+    text-align:right;
+}
+
+#consultazione {
+    background-image: url("../img/consultazione.jpg");
+}
+
+#statistiche{
+    background-image: url("../img/statistiche.jpg");
+}
+
+#tutoraggio{
+    background-image: url("../img/tutoraggio.jpg");
+}
+
+h2{
+    font-family: Tahoma, "Sans Serif";
+    text-transform: uppercase;
+    font-size: 2em;
+    padding-bottom: 30px;
+}
+
+p{
+    font-family: Georgia, "Serif";
+}
+
+strong {
+    font-weight: bold;
+    text-transform: uppercase; 
+}
+
+.color {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.contenuto {
+    position:absolute;
+    z-index: 3;
+    opacity:1;
+    color: #000;
+    top: 50%;
+    margin: -54px 10px 0 10px;
+}
+
+#yellow {
+    background-color: rgba(241, 196, 15, 0.7);
+}
+
+#light_blue{
+    background-color: rgba(52, 152, 219, 0.7);
+}
+
+#green {
+    background-color: rgba(26, 188, 156, 0.7);
+}
+
+footer{
+    padding: 40px 0;
+    color: white;
+    font-family: "Times New Roman", "Serif";
+    background-color: black;
+}
+
+footer div{
+    padding:20px;
+}
+
+footer a{
+    color:white;
+}
+
+footer a:hover{
+    color:gold;
+}
+
+h3{
+    padding-bottom: 10px;
+    font-size: 1.3em;
+}
+
+/*loginForm.php*/
+
+form {  
+    border: solid black thin;
+    width: 650px;
+    text-align: center;
+    line-height: 1.1em;
+    margin:0 auto;
+}
+
+form *{
+    font-size: 1.1em;
+    margin: 7px 5px;
+    font-family: "Times New Roman", Serif;
+}
+
+#sign_in_content{
+    margin: 50px auto;
+    display:block;
+    width: 700px;
+}
+
+#sign_in_content div{
+    margin: 10px auto;
+    text-align: center;
+}
+
+#sign_in_content_header{
+    height: 200px;
+    width: 650px;
+    margin-top: 70px;
+    margin-bottom: 25px;
+    background-image: url('../img/logo.png');
+    background-size: 100% 100%
+}
+
+#enter_login_button {
+    font-family: Arial, "Sans Serif";
+    background-color: #EEE;
+    border: outset;
+    cursor: pointer;
+    border-radius: 12%;
+}
+
+#sign_in_content input[type=text], #sign_in_content input[type=password]{
+    border-color: lightblue;
+}
+
+#sign_in_content input[type=text]:hover, #sign_in_content input[type=password]:hover{
+    border-bottom-color: navy;
+}
+
+#sign_in_content input[type=text]:focus, #sign_in_content input[type=password]:focus{
+    background-color: lightblue;
+    border-color: blue;
+}
+
+/* registerForm.php*/
+
+#register_content{
+    margin: 50px auto;
+    display:block;
+    width: 700px;
+    height: auto;
+}
+
+#register_content div{
+    margin: 10px auto;
+    text-align: center;
+}
+
+#register_content_header{
+    height: 200px;
+    width: 650px;
+    margin-top: 70px;
+    margin-bottom: 25px;
+    background-image: url('../img/logo.png');
+    background-size: 100% 100%
+}
+
+#register_content input[type=text], #register_content input[type=email]{
+    border-color: lightblue;
+}
+
+#register_content input[type=text]:hover{
+    border-bottom-color: navy;
+}
+
+#register_content input[type=text]:focus{
+    background-color: lightblue;
+    border-color: blue;
+}
+
+#register_content input[type=number]{
+    border-color: lightblue;
+    width: 100px;
+}
+
+.alloro {
+    background: url('../img/alloroSu.jpg')right no-repeat, url('../img/alloroGiu.jpg')left no-repeat;
+    background-size: 15%, 15%;
+    background-position-y: 58%, 2%;
+}
+
+/*areaDiRicerca.php*/
+
+#areaDiRicerca_header h1{
+    font-size: 4em;    
+}
+
+.fixed_background{
+    background: url('../img/areaDiRicerca.jpg') bottom center no-repeat fixed;
+    -webkit-background-size: cover;
+}
+
+#areaDiRicerca_header {
+    margin: 60px 0 0 0;
+    padding: 60px 0 0 0;
+    height: auto;
+    text-align: center;
+    font-family: Roboto Condensed,Arial,sans-serif;  
+    color:white;
+}
+
+#areaDiRicerca_header>* {
+    background-color: rgba(52, 152, 219, 0.65);
+}
+
+#areaDiRicerca_header p{
+    margin-top: 50px;
+    font-size: 2.3em;
+}
+
+#areaDiRicerca_header em {
+    color: gold;
+    font-style: normal;
+}
+
+#areaDiRicerca_form{
+    border: none;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    width:100%
+}
+
+#areaDiRicerca_form *{
+    display: inline-block;
+    font-size: 1.9em;
+    max-width: 24%
+}
+
+#areaDiRicerca_form select{
+    font-size: 1.3em;
+    outline: none;
+    -webkit-border-radius:15px;
+    background:white;
+    border:1px solid #cccccc;
+    color: #cccccc;
+}
+
+
+.stats_wrapper {
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    background-color: white;
+    margin-top: 330px;
+    display: none;
+}
+
+.stat_wrapper_legend {
+    font-size: 2.7em;   
+    margin: 10px 0;
+    width: 100%;
+}
+
+.cdl_description{
+     color: #555555;
+     font-size: 1.3em;
+}
+
+#uni_stat_wrapper_legend {
+    color: #cccccc;
+}
+
+.uni_stat_item {
+    width: 20%;
+    display: inline-block;
+    margin: 110px 10px;
+    color: #cccccc;
+    font-size: 1.8em;
+    vertical-align: top;
+    height: 220px;
+    padding: 6px;
+    border: 2px solid #cccccc;
+    background: url('../img/istogramma.jpg') bottom center no-repeat;
+    -webkit-background-size: cover;
+    position: relative;
+}
+
+.uni_stat_item a, .uni_stat_item p{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    margin-bottom: 1em;
+    width: 100%;
+    
+}
+
+.uni_stat_item label {
+    position: static;
+}
+
+
+#cdl_stat_wrapper_legend {
+    color: #aaaaaa;
+}
+
+.cdl_stat_item {
+    width: 20%;
+    display: inline-block;
+    margin: 110px 10px;
+    color: #aaaaaa;
+    font-size: 1.8em;
+    vertical-align: top;
+    height: 220px;
+    padding: 6px;
+    border: 2px solid #aaaaaa;
+    background: url('../img/cartesiano.jpg') bottom center no-repeat;
+    -webkit-background-size: cover;
+    position: relative;
+}
+
+.cdl_stat_item a, .cdl_stat_item p{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    margin-bottom: 0.9em;
+    width: 100%;
+    
+}
+
+.cdl_stat_item label {
+    position: static;
+}
+
+#tutor_wrapper_legend {
+    color: #cccccc;
+}
+
+#tutorList{
+    margin: 30px;
+    max-width: 100%;
+}
+
+.tutor_list_item{
+    display: block;
+    border: outset;
+    color: #cccccc;
+    font-size: 2.1em;
+    padding: 0;
+    text-align: justify;
+    margin: 10px auto;
+    position: relative;
+}
+
+.tutor_list_item * {
+    display:inline-block;
+    margin: 0 20px;
+    padding-bottom: 8px;
+    vertical-align: top;
+}
+
+.round {      
+    margin: 5px;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    float: left;
+}
+
+.data_tutor_container{
+    display: inline-block;
+    position: relative;
+    margin: auto 12px;
+    max-width: 56%;
+}
+
+.block_data_item{
+    display: block;
+}
+
+.inline-block_data_item{
+    display: inline-block;
+    text-align: center;
+}
+
+#photoWrapper{
+    top:40px;
+}
+
+.star{
+    margin: 0 10px;
+    padding: 0;
+    vertical-align: middle;
+}
+
+#button_tutor_container{
+    top:115px;
+}
+
+.userTutorButton{
+    text-decoration: none;
+    position: relative;
+    float: right;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 10%;
+    color: black;
+    background-color: rgba(220, 220, 220, 0.7);
+    padding:7px;
+    top:-30px;
+}
+
+.userTutorButton:hover{
+    color: blue;
+    background-color: gold;
+}
+
+/* paginaPersonale.php*/
+
+#MyMuse_content{
+    margin-top: 80px;
+}
+
+#MyMuse_aside{
+    height: 540px;
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    background-color: rgba(26, 188, 156, 0.35);
+}
+
+#MyMuse_welcome em{
+    color: rgb(0, 120, 80);
+}
+
+#MyMuse_welcome{   
+    text-align: center;
+    font-size: 2.5em;
+    margin: 20px auto;
+}
+
+.MyMuseOption, .MyMuseOption:visited, .MyMuseOption:link{
+    display: block;
+    font-size: 2em;
+    border: inset #cccccc;
+    padding: 20px 8px;
+    margin: 5px auto;
+    text-decoration: none;
+    color: black;
+    background-color: rgba(26, 188, 156, 0.2);
+}
+
+.MyMuseOption:active{
+    border: outset;
+}
+
+#MyMuse_frame{
+    height: 540px;
+    width: 74%;
+    display: inline-block;
+}
+
+/*modificaDatiForm.php*/
+
+#ajax_filled_form{
+    margin-top: 50px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.modificaDatiLabel{
+    font-family: Arial, "Sans Serif";
+}
+
+.modificaDatiInput{    
+    margin-bottom: 40px;
+    width: 90%;
+    color: #333333;
+}
+
+.modificaDatiInput:focus{
+    color: #bbbbbb;
+}
+
+/*eliminaTutor.php*/
+
+.userTutorDeleteButton{
+    text-decoration: none;
+    position: relative;
+    float: right;
+    display: inline-block;
+    border: 1px solid red;
+    border-radius: 10%;
+    color: red;
+    background-color: whitesmoke;
+    padding:7px;
+    top:-30px;
+}
+
+.userTutorDeleteButton:hover{
+    color: whitesmoke;
+    background-color: red;
+}
+
+
+/*amministrazione.php*/
+#Admin_content{
+    margin-top: 0px;
+}
+
+#Admin_aside{
+    height: 600px;
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    background-color: rgba(241, 196, 15, 0.35);
+}
+
+#MyMuse_welcome em{
+    color: rgb(0, 120, 80);
+}
+
+#MyMuse_welcome{   
+    text-align: center;
+    font-size: 2.5em;
+    margin: 20px auto;
+}
+
+.Admin, .Admin:visited, .Admin:link{
+    background-color: rgba(241, 196, 15, 0.2);
+}
+
+
+#Admin_frame{
+    height: 600px;
+    width: 74%;
+    display: inline-block;
+}
+
+/*gestisciUniversita.php*/
+
+th{
+    font-size: 1.5em;
+    line-height: 2.3em;
+    vertical-align: middle;
+    background-color: rgba(241, 196, 15, 0.4);
+    border: 1px solid black;
+}
+
+tr input{
+    font-size: 1.2em;
+    line-height: 1.9em;
+    text-align: center;
+    cursor: cell;
+}
+
+tr:nth-child(even) input{
+   background-color: rgba(241, 196, 15, 0.15); 
+}
+
+tr:nth-child(odd) input{
+   background-color: rgba(241, 196, 15, 0.5);
+}
+
+tr input:focus{
+    border: 1px black outset;
+    color: navy;
+    cursor: text;
+}
+
+.piu{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* rimuoviUtenti.php*/
+.search {
+  width: 160px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('../../img/lente-ingrandimento.jpg');
+  background-position: 10px 10px; 
+  background-size: 32px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.search:focus {
+  width: 100%;
+}
+
+.userDeleteButton{
+    text-decoration: none;
+    position: relative;
+    float: right;
+    display: inline-block;
+    border: 1px solid red;
+    border-radius: 10%;
+    color: red;
+    background-color: whitesmoke;
+    padding:7px;
+    top:90px;
+}
+
+#button_user_container{
+    position: relative;
+    float: right;
+}
+
+.userDeleteButton:hover{
+    color: whitesmoke;
+    background-color: red;
+}
+
+#userList{
+    margin: 30px;
+    max-width: 100%;
+}
+
+.user_list_item{
+    display: block;
+    border: outset;
+    color: #cccccc;
+    font-size: 2.1em;
+    padding: 0;
+    text-align: justify;
+    margin: 10px auto;
+    position: relative;
+}
+
+.user_list_item * {
+    margin: 0 25px;
+    padding-bottom: 8px;
+    vertical-align: top;
+}
+
+.data_user_container{
+    display: inline-block;
+    position: relative;
+    margin: auto 12px;
+    max-width: 60%;
+}
+
+.profile_photo{
+    position: relative;
+    top: 10px;
+}

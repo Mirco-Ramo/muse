@@ -1,0 +1,52 @@
+<?php
+    session_start();
+    require_once __DIR__ . "/../costanti.php";
+    include DIR_SESSION . "sessionUtil.php";	
+    
+    if (!isLogged() || !userIsAdmin()){
+        header('Location: ./home.php');
+        exit;
+    }    
+   
+?>
+
+<html lang="it">
+    <head>
+        <title>MUSE</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Mirco Ramo">
+        <meta name="keywords" content="MUSE, Universit&aacute;, Tutor">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href = "../../img/icona.png" sizes="32x32" type="image/png">
+        <link rel="shortcut icon" href="../../img/favicon.ico" sizes="32x32" type="image/x-icon">
+        <link rel="stylesheet" href="../../css/Muse.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="../../css/popup.css" type="text/css" media="screen"> 
+        <script type="text/javascript" src="../../js/ajax/ajaxManager.js"></script>
+        <script type="text/javascript" src="../../js/ajax/offertaFormativaLoader.js"></script>
+        <script type="text/javascript" src="../../js/ajax/offertaFormativaTable.js"></script>
+    </head>
+    <body onload="OffertaFormativaLoader.loadEverything()">
+        
+        <?php
+            include DIR_NAVIGATION . "messageUtil.php";
+            if(isset($_GET['message']))
+                showMessage($_GET['message']);
+        ?>
+        
+        <table>
+            <thead>
+                <th>Universit&aacute;</th>
+               <th>Corso Di Laurea</th>
+               <th>Voto Medio di Laurea</th>
+               <th>Tempo Medio di Laurea</th>
+               <th>%occupati dopo 1 anno</th>
+               <th>%occupati dopo 5 anni</th>
+            </thead>
+            <tbody id="ajax_filled_of">
+                
+            </tbody>
+        </table>       
+        
+    </body>
+</html>
+

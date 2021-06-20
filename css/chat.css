@@ -1,0 +1,285 @@
+h1{
+    font-size: 3em;
+    color: rgb(26, 188, 156);
+    text-shadow: 2px 2px black; 
+    margin: 15px auto;
+}
+
+.first_row *{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px auto;
+}
+
+h2{
+    font-size: 2em;
+    text-shadow: 1px 1px rgb(26, 188, 156);
+}
+
+.first_row p{
+    font-size: 1.8em;
+    position: relative;
+    float: right;
+}
+
+#contact_list{
+    margin: 30px;
+    max-width: 100%;
+}
+
+.contact_list_item{
+    display: block;
+    border: outset;
+    color: #cccccc;
+    font-size: 2.1em;
+    padding: 0;
+    text-align: justify;
+    margin: 10px auto;
+    position: relative;
+}
+
+.contact_list_item * {
+    display:inline-block;
+    margin: 0 25px;
+    vertical-align: top;
+}
+
+.round {      
+    margin: 5px;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    float: left;
+}
+
+.new_message_counter{
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    background-color: red;
+    color: white;
+    font-size: 0.8em;
+    height: 25px;
+    min-width: 25px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+}
+
+.data_contact_container{
+    display: inline-block;
+    position: relative;
+    margin: auto 12px;
+}
+
+.block_data_item{
+    display: block;
+    margin-top: 5px;
+    min-width: 50%;
+    padding-left: 20px;
+}
+
+.inline-block_data_item{
+    display: inline-block;
+    text-align: center;
+}
+
+#button_contact_container{
+    position: relative;
+    float: right;
+}
+
+.openChatButton{
+    text-decoration: none;
+    position: relative;
+    float: right;
+    display: inline-block;
+    border: 2px solid rgb(26, 188, 156);
+    border-radius: 18px;
+    color: black;
+    background-color: whitesmoke;
+    padding:10px;
+    font-size: 1em;
+    top:38px;
+}
+
+.openChatButton:hover{
+    color: whitesmoke;
+    background-color: rgb(26, 188, 156);
+}
+
+
+
+#dark_background_div {
+  display: none; /* default:nascosto */
+  position: fixed; 
+  z-index: 40; 
+  padding-top: 10px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;  
+  background-color: rgba(0,0,0,0.4); 
+  text-align: center;
+}
+
+#dark_background_div div{
+  position: relative; 
+  height: 90%;
+  width: 45%;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid #888;
+  box-shadow: 0 6px 10px 0 rgba(26, 188, 156, 0.5), 0 8px 24px 0 rgba(26, 188, 156, 0.35);;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s; 
+}
+
+#chat_frame {
+  position: relative;
+  height:100%;
+  width: 100%;
+}
+
+/* Add Animation. fonte: w3school.org */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* Close Button */
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-top: 8px;
+  padding-right: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.close:hover,
+.close:focus {
+  color: #cccccc;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+/*private chat*/
+
+body{
+    background-color: rgba(255, 255, 255, 1);
+    margin: 0;
+}
+
+.message_dashboard{
+    width: 100%;
+    height: 370px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* Chrome, Safari and Opera*/  /*fonte: w3schools*/
+.message_dashboard::-webkit-scrollbar {
+    display: none;
+}
+
+/* IE, Edge and Firefox */  /*fonte: w3schools*/
+.message_dashboard {
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+#message_list{
+    padding: 0px;
+    margin: 5px 1px 0 1px;
+}
+
+#message_list li{
+    max-width: 80%;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.sent_message_list_item{
+    background-color: rgba(26, 188, 156, 0.8);
+    position: relative;
+    float: right;
+    clear: right;
+}
+
+.received_message_list_item{
+    background-color: white;
+    clear: right;
+}
+
+.received_message_list_item .sender_heading_data_item{
+    color: rgb(26, 188, 156);
+}
+
+.sender_heading_data_item{
+    display: block;
+    font-size: 1.2em;
+    margin: 2px auto;
+}
+
+.message_text_data_item{
+    display: inline-block;
+    margin: 2px 5px;
+}
+
+.timestamp_data_item{
+    font-size: 0.6em;
+    display: inline-block;
+    margin: 2px 5px;
+}
+
+.message_textarea{
+    display: block;
+    width: 80%;
+    clear: right;
+    height: 30%;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 2px solid #999999
+}
+
+.message_textarea:focus{
+    border-color: black;
+}
+
+.send_button{
+    border-radius: 5px;
+    font-size: 1.7em;
+    padding:2px;
+    background: rgb(2,0,36);
+    background: linear-gradient(41deg, rgba(2,0,36,1) 0%, rgba(50,208,177,0) 7%, rgba(26,188,156,1) 90%);
+    position: absolute;
+    right: 1%;
+    bottom: 12%;
+    text-transform: uppercase;
+    border: 1px black outset;
+}
+
+.send_button:active{
+    border: inset;
+}
